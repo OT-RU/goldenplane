@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react'
-import { CopyIcon, ExternalLink } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import styles from './App.module.css'
 
@@ -25,6 +25,7 @@ const App = () => {
 
 			return () => clearTimeout(hideTimer)
 		}, 4000)
+		
 		const handleScroll = () => {
 			setScrollY(window.scrollY)
 		}
@@ -79,16 +80,9 @@ const App = () => {
 
 	const openblum = () => {
 		window.open(
-			'https://t.me/blum/app?startapp=memepadjetton_GP10_bgPxw-ref_b5Kcew7dwQ',
+			'https://x.com/xgoldenplane?s=21',
 			'_blank'
 		)
-	}
-
-	const copyText = () => {
-		navigator.clipboard.writeText(
-			'EQCZup7zV9qkqO1sjVoNRYSWqVk7oX_6eg3wDMJJFCR2CJQ8'
-		)
-		alert('Copied!')
 	}
 
 	return (
@@ -120,47 +114,22 @@ const App = () => {
 			</header>
 
 			<main className={styles.mainContent}>
-				<div className={styles.tokenInfo}>
-					<div className={styles.infoCard}>
-						<div className={styles.cardHeader}>
-							<h2>Token Information</h2>
-						</div>
-
-						<div className={styles.infoGrid}>
-							<div className={styles.infoItem}>
-								<span className={styles.label}>Token Name:</span>
-								<span className={styles.value}>Golden Plane (GP10)</span>
-							</div>
-							<div className={styles.infoItem}>
-								<span className={styles.label}>Blockchain:</span>
-								<span className={styles.value}>TON</span>
-							</div>
-							<div className={styles.infoItem} onClick={copyText}>
-								<span className={styles.label}>Contract:</span>
-
-								<span className={styles.value}>
-									<CopyIcon size={15} style={{ marginRight: '10px' }} />
-									EQCZ...CJQ8
-								</span>
-							</div>
-						</div>
-
-						<div className={styles.desktopButtons}>
-							<button
-								className={`${styles.actionBtn} ${styles.telegramBtn}`}
-								onClick={openTelegram}
-							>
-								<ExternalLink size={20} />
-								Join Telegram
-							</button>
-							<button
-								className={`${styles.actionBtn} ${styles.blumBtn}`}
-								onClick={openblum}
-							>
-								<ExternalLink size={20} />
-								View on Blum
-							</button>
-						</div>
+				<div className={styles.buttonsContainer}>
+					<div className={styles.desktopButtons}>
+						<button
+							className={`${styles.actionBtn} ${styles.telegramBtn}`}
+							onClick={openTelegram}
+						>
+							<ExternalLink size={20} />
+							Join Telegram
+						</button>
+						<button
+							className={`${styles.actionBtn} ${styles.blumBtn}`}
+							onClick={openblum}
+						>
+							<ExternalLink size={20} />
+							View on X
+						</button>
 					</div>
 				</div>
 			</main>
@@ -176,7 +145,7 @@ const App = () => {
 					className={`${styles.mobileBtn} ${styles.blumBtn}`}
 					onClick={openblum}
 				>
-					Blum
+					X (Twitter)
 				</button>
 			</div>
 		</div>
